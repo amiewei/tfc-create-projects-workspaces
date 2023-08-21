@@ -14,4 +14,4 @@ terraform {
   }
 }
 
-# provider "tfe" {}
+provider "tfe" {}
