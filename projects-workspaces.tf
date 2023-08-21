@@ -1,19 +1,22 @@
 resource "tfe_project" "AppA" {
   organization = var.orgName
-  name         = "General-Admin"
+  name         = "GeneralAdmin"
 }
 
 resource "tfe_workspace" "appA-dev" {
   name         = "appA-dev"
-  organization = tfe_project.AppA.organization
+  organization = var.orgName
+  tag_names    = ["dev", "app"]
 }
 
 resource "tfe_workspace" "appB-test" {
   name         = "appB-test"
-  organization = tfe_project.AppA.organization
+  organization = var.orgName
+  tag_names    = ["test", "app"]
 }
 
 resource "tfe_workspace" "appC-prod" {
   name         = "appC-prod"
-  organization = tfe_project.AppA.organization
+  organization = var.orgName
+  tag_names    = ["prod", "app"]
 }
