@@ -1,6 +1,6 @@
 resource "tfe_project" "AppA" {
   organization = var.orgName
-  name         = "Application A"
+  name         = "General-Admin"
 }
 
 resource "tfe_workspace" "appA-dev" {
