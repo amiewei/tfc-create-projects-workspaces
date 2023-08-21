@@ -3,7 +3,7 @@ terraform {
     organization = "tf-se-test"
 
     workspaces {
-      name = "tfc-projects-workspaces"
+      name = "tfc-create-projects-workspaces"
     }
   }
   required_providers {

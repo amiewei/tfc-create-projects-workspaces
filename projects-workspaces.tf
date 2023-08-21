@@ -5,15 +5,15 @@ resource "tfe_project" "AppA" {
 
 resource "tfe_workspace" "appA-dev" {
   name         = "appA-dev"
-  organization = tfe_organization.appA.name
+  organization = tfe_project.AppA.organization
 }
 
 resource "tfe_workspace" "appB-test" {
   name         = "appB-test"
-  organization = tfe_organization.appA.name
+  organization = tfe_project.AppA.organization
 }
 
 resource "tfe_workspace" "appC-prod" {
   name         = "appC-prod"
-  organization = tfe_organization.appA.name
+  organization = tfe_project.AppA.organization
 }
