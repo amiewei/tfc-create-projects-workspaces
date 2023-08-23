@@ -1,15 +1,11 @@
-output "Project_A_Id" {
-  value = tfe_project.AppA.id
+output "Project_Id" {
+  value = data.tfe_project.Azure.id
 }
 
-output "appA-dev_workspace_id" {
-  value = tfe_workspace.appA-dev.id
+output "Org_Id" {
+  value = data.tfe_organization.org.id
 }
 
-output "appB-test_workspace_id" {
-  value = tfe_workspace.appB-test.id
-}
-
-output "appC-prod_workspace_id" {
-  value = tfe_workspace.appC-prod.id
+output "Org_Name" {
+  value = data.tfe_organization.org.name
 }
