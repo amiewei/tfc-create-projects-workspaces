@@ -11,13 +11,13 @@ data "tfe_organization" "org" {
 locals {
   services = [
     "service-1",
-    # "service-2",
-    # "service-3",
+    "service-2",
+    "service-3",
   ]
   service_envs = [
     "dev",
-    # "test",
-    # "prod"
+    "test",
+    "prod"
   ]
 
   workspaces = [
